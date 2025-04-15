@@ -7362,6 +7362,9 @@ void __fastcall TForm1::updateNumberOfPointsComboBox(const bool process)
 
 	cb->Items->BeginUpdate();
 	cb->Clear();
+	
+	const int *NUMPOINT = NULL;
+	int LENGTH = 0;
 
 	// MODIFY Simplify the original code
 	switch (data_unit.m_vna_data.type)
