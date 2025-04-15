@@ -1107,9 +1107,6 @@ void __fastcall CNanoVNA1Comms::processRxBlock()
 									}
 									else
 									{
-										const int pos = s2.Pos("commands:");
-										if (pos > 0)
-										{
 										//MODIFY	Compatible with the commands of different models
 										int pos = s2.Pos("commands:")>s2.Pos("usage:")?s2.Pos("commands:"):s2.Pos("usage:");
 										if (pos > 0)
