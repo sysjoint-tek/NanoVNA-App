@@ -372,6 +372,36 @@ void __fastcall CData::minMaxFreqHz(int64_t &min_Hz, int64_t &max_Hz)
 		max_Hz = MAX_TINYSA_FREQ_HZ;
 		min_Hz = MIN_TINYSA_FREQ_HZ;
 	}
+		//MODIFY  Fixed parameter settings
+	if (m_vna_data.type == UNIT_TYPE_NANOVNA_FV2)
+	{
+		max_Hz = MAX_NANOVNA_FV2_HZ;
+		min_Hz = MIN_NANOVNA_FV2_HZ;
+	}
+
+	if (m_vna_data.type == UNIT_TYPE_NANOVNA_FV3)
+	{
+		max_Hz = MAX_NANOVNA_FV3_HZ;
+		min_Hz = MIN_NANOVNA_FV3_HZ;
+	}
+
+	if (m_vna_data.type == UNIT_TYPE_JNCRadio_VNA_3G)
+	{
+		max_Hz = MAX_JNCRadio_VNA_3G_HZ;
+		min_Hz = MIN_JNCRadio_VNA_3G_HZ;
+	}
+
+	if (m_vna_data.type == UNIT_TYPE_SV6301_A)
+	{
+		max_Hz = MAX_SV6301_A;
+		min_Hz = MIN_SV6301_A;
+	}
+
+	if (m_vna_data.type == UNIT_TYPE_SV4401_A)
+	{
+		max_Hz = MAX_SV4401_A;
+		min_Hz = MIN_SV4401_A;
+	}
 }
 
 int __fastcall CData::freqArraySize(const int mem)
