@@ -178,12 +178,18 @@ double __fastcall CData::freq_step(const int mem)
 	{
 		return (m_points > 1) ? (double)(m_freq_stop_Hz - m_freq_start_Hz) / (m_points - 1) : 0;
 	}
-	else
-	{
-		const int size = freqArraySize(mem);
-		return (size > 1) ? (double)(m_point_mem[mem][size - 1].Hz - m_point_mem[mem][0].Hz) / (size - 1) : 0;
-	}
-}
+
+	else
+
+	{
+
+		const int size = freqArraySize(mem);
+
+		return (size > 1) ? (double)(m_point_mem[mem][size - 1].Hz - m_point_mem[mem][0].Hz) / (size - 1) : 0;
+
+	}
+
+}
 
 double __fastcall CData::max_time(const double freq_step)
 {
